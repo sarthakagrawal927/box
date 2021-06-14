@@ -11,18 +11,15 @@ const Timer = () => {
   const [secondsLeft, setSecondsLeft] = useState(25 * 60);
   const [timerRunning, setTimerRunning] = useState(false);
   const [speed, setCurrentSpeed] = useState(100);
-  const [boxMeter, setBoxMeter] = useState((secondsLeft * 100) / speed);
 
   const incrementSession = () => {
     setSessionLength(sessionLength + 1);
     setSecondsLeft((sessionLength + 1) * 60);
-    setBoxMeter((secondsLeft * 100) / speed);
   };
 
   const decrementSession = () => {
     setSessionLength(sessionLength - 1);
     setSecondsLeft((sessionLength - 1) * 60);
-    setBoxMeter((secondsLeft * 100) / speed);
   };
 
   const incrementBreak = () => {

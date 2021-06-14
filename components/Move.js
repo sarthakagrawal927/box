@@ -23,7 +23,7 @@ const defences = [
 const nd = defences.length;
 const np = punches.length;
 
-const getNextMove = (minutes, seconds) => {
+const getNextMove = (seconds) => {
   return seconds % 5
     ? punches[Math.floor(Math.random() * np)]
     : defences[Math.floor(Math.random() * nd)];
@@ -32,13 +32,8 @@ const getNextMove = (minutes, seconds) => {
 const Moves = ({ minutes, seconds, timerRunning }) => {
   return (
     <div className=''>
-      {timerRunning && (
-        <h1 className='moveDisplay'>{getNextMove(minutes, seconds)}</h1>
-      )}
-      <p>
-        {minutes < 10 ? ("0" + minutes).slice(-2) : minutes}:
-        {seconds < 10 ? ("0" + seconds).slice(-2) : seconds}
-      </p>
+      {timerRunning && <h1 className='moveDisplay'>{getNextMove(seconds)}</h1>}
+      <h1>{minutes * 60 + seconds}</h1>
     </div>
   );
 };
