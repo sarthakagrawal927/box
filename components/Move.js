@@ -1,23 +1,26 @@
 const punches = [
   "Right Upper Cut",
-  "Right Jab",
+  "Cross",
   "Right Hook",
-  "Right Elbow Uppercut",
-  "Right Elbow Hook",
-  "Right Push Kick",
+  "Down Elbow",
+  "Cross Elbow",
+  "Right Front Kick",
+  "Right Side Kick",
   "Left Hook",
   "Left Upper Cut",
-  "Left Jab",
-  "Left Elbow Uppercut",
-  "Left Elbow Hook",
-  "Left Push Kick",
+  "Jab",
+  "Up Elbow",
+  "Snap Elbow",
+  "Left Front Kick",
+  "Left Side Kick",
 ];
 
 const defences = [
-  "Right Reverse Flick",
-  "Right Flick",
-  "Left Reverse Flick",
-  "Left Flick",
+  "Bob & Weave (duck)",
+  "Slide Left",
+  "Slide Right",
+  "Left Parry",
+  "Right Parry",
 ];
 
 const nd = defences.length;
