@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import Session from "./Session";
 import Break from "./Break";
+import Moves from "./Move"
 // import soundfile from "./ride.wav";
 
 const Timer = () => {
   const [sessionLength, setSessionLength] = useState(25);
   const [breakLength, setBreakLength] = useState(5);
-  const [timerLabel, setTimerLabel] = useState("Session");
+  const [timerLabel, setTimerLabel] = useState("Go");
   const [secondsLeft, setSecondsLeft] = useState(25 * 60);
   const [timerRunning, setTimerRunning] = useState(false);
   //   const myAudio = useRef();
@@ -40,11 +41,11 @@ const Timer = () => {
 
   useEffect(() => {
     const handleSwitch = () => {
-      if (timerLabel === "Session") {
+      if (timerLabel === "Go") {
         setTimerLabel("Break");
         setSecondsLeft(breakLength * 60);
       } else if (timerLabel === "Break") {
-        setTimerLabel("Session");
+        setTimerLabel("Go");
         setSecondsLeft(sessionLength * 60);
       }
     };
@@ -86,7 +87,7 @@ const Timer = () => {
     setSessionLength(25);
     setBreakLength(5);
     setSecondsLeft(25 * 60);
-    setTimerLabel("Session");
+    setTimerLabel("Go");
     setTimerRunning(false);
     // myAudio.current.pause();
     // myAudio.current.currentTime = 0;
@@ -108,10 +109,8 @@ const Timer = () => {
       </div>
       <div className='timer-container'>
         <h2 id='timer-label'>{timerLabel}</h2>
-        <h3 id='time-left'>
-          {minutes < 10 ? ("0" + minutes).slice(-2) : minutes}:
-          {seconds < 10 ? ("0" + seconds).slice(-2) : seconds}
-        </h3>
+        
+          <Moves minutes = {minutes} seconds={seconds}/>
 
         <button
           id='start_stop'

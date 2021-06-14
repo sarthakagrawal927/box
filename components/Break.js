@@ -1,7 +1,7 @@
 const Break = (props) => {
   return (
-    <div className='break-container'>
-      <h2 id='break-label'>Break Length</h2>
+    <div className='session-container right'>
+      <h2>Break Length</h2>
 
       <div className='button-container'>
         <button id='break-increment' onClick={props.incrementBreak}>
