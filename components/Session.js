@@ -1,4 +1,4 @@
-const Session = ({incrementSession, decrementSession, sessionLength}) => {
+const Session = ({ incrementSession, decrementSession, sessionLength }) => {
   return (
     <div className='session-container left'>
       <h2>Session Length</h2>
