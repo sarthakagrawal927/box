@@ -6,4 +6,4 @@ Styling PRs are most welcome.
 
 Might add images later on.
 
-Made with ReactJS
+Made with ReactJS (NextJS)
